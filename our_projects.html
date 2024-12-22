@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Подключение шрифтов -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <!-- Подключение файла со стилями -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="main__body">
+  <!-- Основная страница -->
+  <main>
+    <!-- Меню сайта -->
+    <nav>
+      <div class="container">
+        <div class="navbar">
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="./index.html" class="menu__item-link">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a href="./our_projects.html" class="menu__item-link">Наши проекты</a>
+            </li>
+            <li class="menu__item">
+              <a href="" class="menu__item-link">Услуги</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link">Новости</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link">Контакты</a>
+            </li>
+          </ul>
+          <div class="burger">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Секция главного экрана -->
+    <section class="section__hero" id="hero">
+      <div class="wrapper-bg">
+        <div class="container">
+          <div class="hero__inner">
+            <div div class="hero__title">
+              <h1 class="title">Готовые проекты наших учеников</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Секция с готовыми проектами -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="projects__inner">
+          <div class="projects__info">
+            <h5 class="projects__title">Наши проекты</h5>
+          </div>
+          <div class="projects__text">
+            Вы можете познакомиться с готовыми проектами наших учеников!
+            Полный архив с заданиями находятся на нашем диске -
+          </div>
+          <div class="projects__img">
+            <div class="img">
+              <a href="https://drive.google.com/drive/u/0/folders/17t4iYFYXRyP8WKwwZJ_jMCKygB9z98RI" target="_blank">
+                <img src="./img/calculator_project.png" alt="фото 1 проекта" />
+                <div class="overlay"></div>
+                <div class="text-overlay">Базовый калькулятор</div>
+              </a>
+            </div>
+            <div class="img">
+              <a href="https://drive.google.com/drive/u/0/folders/1_mLV0eWt89Lct-j0j--tBu38WlCseTXJ" target="_blank">
+                <img src="./img/number_project.png" alt="фото 2 проекта" />
+                <div class="overlay"></div>
+                <div class="text-overlay">Угадай число</div>
+              </a>
+            </div>
+            <div class="img">
+              <a href="https://drive.google.com/drive/u/0/folders/1GSzO8saTZ-icEiRNO1208IibJB_YT0hR" target="_blank">
+                <img src="./img/quest_project.png" alt="фото 3 проекта" />
+                <div class="overlay"></div>
+                <div class="text-overlay">Математический квест</div>
+              </a>
+            </div>
+            <div class="img">
+              <a href="https://drive.google.com/drive/u/0/folders/18rTelZ5tJ7EnOc63zfzhK6QJIyP-gfAy" target="_blank">
+                <img src="./img/bot_project.png" alt="фото выпол4ненного проекта" />
+                <div class="overlay"></div>
+                <div class="text-overlay">Чат-бот</div>
+              </a>
+            </div>
+          </div>
+          <a href="https://drive.google.com/drive/u/0/folders/1dl5YXp1LeCDUZIvzvY55GpZfxEQybTf9" target="_blank"
+            class="projects-btn">Все проекты
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Секция скачки и загрузки файлов -->
+    <section class="downloads">
+      <div class="container__downloads">
+        <!-- Скрытый элемент input для выбора файлов -->
+        <input type="file" id="fileInput" multiple accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.pdf" />
+        <!-- Кнопка для активации выбора файлов -->
+        <button class="custom-file-input" onclick="document.getElementById('fileInput').click();">
+          Выбрать файл(ы) для загрузки
+          <img src="./icons/download-file.png" width="48" alt="иконка для скачивания файлов" />
+        </button>
+        <!-- Сообщение, если файлы не выбраны -->
+        <div id="noFilesMessage" class="no-files-message" style="display: none">
+          Файл не выбран
+        </div>
+        <div id="fileList" class="file-list"></div>
+        <button id="deleteAllButton" style="display: none">Удалить все файлы</button>
+        <button id="downloadButton" class="download-button" style="display: none">
+          Скачать загруженные файлы
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer">
+        <div class="footer-column">
+          <h3>Контактная информация</h3>
+          <ul>
+            <li>
+              <a href="mailto:example@example.com">http://rfpgu.ru</a>
+            </li>
+            <li><a href="tel:+555-2-36-53">(555)-2-36-53</a></li>
+            <li>
+              <a href="https://yandex.ru/maps/?text=г.%20Рыбница,%20ул.%20Гагарина,%2012" target="_blank">г. Рыбница,
+                ул. Гагарина, 12</a>
+            </li>
+            <iframe class="yandex-map"
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa9152a3bf4c3fb74dfdd2700bb441dbf585c70a02b428e94556f428050b48e09&amp;source=constructor"
+              width="320" height="250" frameborder="0"></iframe>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Основные ссылки</h3>
+          <ul>
+            <li><a class="footer__item-link" href="./index.html">Главная</a></li>
+            <li><a class="footer__item-link" href="#">Наши проекты</a></li>
+            <li><a class="footer__item-link" href="#">Наши услуги</a></li>
+            <li><a class="footer__item-link" href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Наши проекты</h3>
+          <ul>
+            <li><a class="footer__item-link"
+                href="https://drive.google.com/drive/u/0/folders/17t4iYFYXRyP8WKwwZJ_jMCKygB9z98RI" target="_blank"">Базовый калькулятор</a></li>
+            <li><a class=" footer__item-link"
+                href="https://drive.google.com/drive/u/0/folders/1_mLV0eWt89Lct-j0j--tBu38WlCseTXJ"
+                target="_blank">Угадай число</a></li>
+            <li>
+              <a class="footer__item-link"
+                href="https://drive.google.com/drive/u/0/folders/1GSzO8saTZ-icEiRNO1208IibJB_YT0hR"
+                target="_blank">Математический квест</a>
+            </li>
+            <li>
+              <a class="footer__item-link"
+                href="https://drive.google.com/drive/u/0/folders/18rTelZ5tJ7EnOc63zfzhK6QJIyP-gfAy"
+                target="_blank">Чат-бот</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Социальные сети</h3>
+          <ul>
+            <li>
+              <a class="footer__item-link" href="https://vk.com/rf_pgu?from=search" target="_blank">VK.com</a>
+            </li>
+            <li>
+              <a class="footer__item-link"
+                href="https://www.instagram.com/pgupmr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"
+                target="_blank">Instagram</a>
+            </li>
+            <li>
+              <a class="footer__item-link" href="https://www.facebook.com/groups/vypuskniki.rfpgu/"
+                target="_blank">Facebook</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="line-bottom"></div>
+    </div>
+  </footer>
+</body>
+<!-- Подключение JavaScript файла -->
+<script src="./js/scripts.js"></script>
+
+</html>
